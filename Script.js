@@ -23,6 +23,21 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
 }).addTo(map);
 
+
+
+//L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=tu_clave_de_api', {
+//  attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+//    maxZoom: 19,
+//    id: 'mapbox/streets-v11',
+//    tileSize: 512,
+//    zoomOffset: -1,
+//    language: 'es' // Configura el idioma a español
+//}).addTo(map);
+
+
+
+
+
 // Variable para almacenar el marcador actual
 var marker;
 
