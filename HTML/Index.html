@@ -6,11 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú lateral responsive - MagtimusPro</title>
 
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="header.js">
-
+    <link rel="stylesheet" href="/CSS/header.css">
+    <link rel="stylesheet" href="/JS/header.js">
+ 
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
 </head>
+<style>
+   
+   #map {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 75%;
+    width: 60%;
+    max-width: 800px; /* Por ejemplo, establece un ancho máximo para el mapa */
+    max-height: 600px; /* Por ejemplo, establece una altura máxima para el mapa */
+    z-index: 0;
+}
+
+    
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    
+    #search-input {
+      position: absolute;
+      top: 50px;
+      left: 10px;
+      width: 300px;
+      height: 30px;
+      padding: 3px;
+      font-size: 15px;
+      z-index: 5;
+      border: 1px solid #ccc;
+      background-color: white;
+    }
+  </style>
 <body id="body">
     
     <header>
@@ -83,6 +117,14 @@
         
     </main>
 
-    <script src="header.js"></script>
+    <script src="/JS/header.js"></script>
+    <script async defer
+    src="https://maps.  .com/maps/api/js?key=TU_API_KEY&callback=initMap">
+    </script>
+    <input id="search-input" type="text" placeholder="Search">
+    <div id="map"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMU-Pzd0WGlm2hSO0yJqTR_6pW-sbXvSo&libraries=places&callback=initMap"
+    async defer></script>
+    <script src="/JS/Google_map.js"></script>
 </body>
 </html>
