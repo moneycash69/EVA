@@ -8,6 +8,8 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+
+
 body{
     margin-left: 80px;
     margin-top: 80px;
@@ -32,6 +34,7 @@ header{
 .icon__menu{
     width: 50px;
     height: 100%;
+    margin-left: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,7 +44,7 @@ header{
 .icon__menu i{
     font-size: 20px;
     cursor: pointer;
-    margin-left: 120px;
+    margin-left: 25px;
     position: absolute;
 }
 
@@ -156,5 +159,161 @@ a.selected{
     .menu__side_move{
         width: 80px;
         left: -80px;
+    }
+}
+.fieldset {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    width: 200px; /* Reduzco el ancho para que sea más vertical */
+    float: right; /* para alinear a la derecha */
+    margin-right: 20px; /* ajusta el margen derecho según sea necesario */
+    margin-top: 20px; /* Añado un margen superior para separarlo del mapa */
+  }
+  
+  .legend {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  .campo label {
+    display: block;
+    margin-bottom: 5px;
+    margin-left: 25px;
+  }
+  
+  .campo input[type="text"] {
+    width: calc(100% - 10px); /* ajusta el ancho del campo de entrada */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  .submit-button {
+    position: fixed; /* Cambiado a fixed para que se mantenga fijo en la ventana */
+    bottom: 40px; /* Ajustado para que esté 20px desde la parte inferior */
+    right: 20px; /* Ajustado para que esté 20px desde el borde derecho */
+    z-index: 1000; /* Ajustado el z-index para asegurarse de que esté por encima de otros elementos */
+    display: block;
+    width: auto;
+    padding: 8px 12px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #0056b3; /* Cambia el color de fondo al pasar sobre el botón */
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+footer {
+    background-color: #111;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: none;
+}
+
+.show-footer {
+    display: block;
+}
+
+.footerContainer {
+    width: 100%;
+    padding: 70px 30px 20px;
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: center;
+}
+
+.socialIcons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.socialIcons a i {
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+
+.socialIcons a:hover {
+    background-color: #111;
+    transition: 0.5s;
+}
+
+.socialIcons a:hover i {
+    color: white;
+    transition: 0.5s;
+}
+
+.footerNav {
+    margin: 30px 0;
+}
+
+.footerNav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.footerNav ul li a {
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footerNav ul li a:hover {
+    opacity: 1;
+}
+
+.footerBottom {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+}
+
+.footerBottom p {
+    color: white;
+}
+
+.designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+
+@media (max-width: 700px) {
+    .footerNav ul {
+        flex-direction: column;
+    }
+
+    .footerNav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+
+    .socialIcons a {
+        padding: 8px;
+        margin: 4px;
     }
 }
