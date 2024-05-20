@@ -12,19 +12,23 @@
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
 </head>
 <style>
-   
-   #map {
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 75%;
-    width: 60%;
-    max-width: 800px; /* Por ejemplo, establece un ancho máximo para el mapa */
-    max-height: 600px; /* Por ejemplo, establece una altura máxima para el mapa */
-    z-index: 0;
-}
 
+    #map-container {
+        position: relative; /* Esto hace que el contenedor sea posicionado */
+        height: 100vh; /* Esto hace que el contenedor ocupe toda la pantalla */
+    }
+    
+    #map {
+        position: absolute;
+        top: 0; /* Cambia esto */
+        left: 50%;
+        transform: translate(-50%, 0); /* Cambia esto */
+        height: 75%;
+        width: 60%;
+        max-width: 800px;
+        max-height: 600px;
+        z-index: 5;
+    }
     
     html, body {
       height: 100%;
@@ -35,12 +39,12 @@
     #search-input {
       position: absolute;
       top: 50px;
-      left: 10px;
+      left: 650px;
       width: 300px;
       height: 30px;
       padding: 3px;
       font-size: 15px;
-      z-index: 5;
+      z-index: 100;
       border: 1px solid #ccc;
       background-color: white;
     }
@@ -120,15 +124,16 @@
       </fieldset>
       <button type="submit" class="submit-button">Submit</button>
 
-    <script src="/JS/header.js"></script>
-    <script async defer
-    src="https://maps.  .com/maps/api/js?key=TU_API_KEY&callback=initMap">
-    </script>
+<script src="/JS/header.js"></script>
+<div id="map-container"> 
     <input id="search-input" type="text" placeholder="Search">
     <div id="map"></div>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMU-Pzd0WGlm2hSO0yJqTR_6pW-sbXvSo&libraries=places&callback=initMap"
-    async defer></script>
-    <script src="/JS/Google_map.js"></script>
+</div> 
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMU-Pzd0WGlm2hSO0yJqTR_6pW-sbXvSo&libraries=places&callback=initMap"
+async defer></script>
+<script src="/JS/Google_map.js"></script>
+
+
     <footer>
         <div class="footerContainer">
             <div class="socialIcons">
@@ -155,3 +160,5 @@
 </body>
 
 </html>
+
+
