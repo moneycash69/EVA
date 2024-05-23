@@ -5,160 +5,78 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú lateral responsive - MagtimusPro</title>
-
     <link rel="stylesheet" href="/CSS/header.css">
-    <link rel="stylesheet" href="/JS/header.js">
- 
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
 </head>
-<style>
-
-    #map-container {
-        position: relative; /* Esto hace que el contenedor sea posicionado */
-        height: 100vh; /* Esto hace que el contenedor ocupe toda la pantalla */
-    }
-    
-    #map {
-        position: absolute;
-        top: 0; /* Cambia esto */
-        left: 50%;
-        transform: translate(-50%, 0); /* Cambia esto */
-        height: 75%;
-        width: 60%;
-        max-width: 800px;
-        max-height: 600px;
-        z-index: 5;
-    }
-    
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
-    
-    #search-input {
-      position: absolute;
-      top: 50px;
-      left: 650px;
-      width: 300px;
-      height: 30px;
-      padding: 3px;
-      font-size: 15px;
-      z-index: 100;
-      border: 1px solid #ccc;
-      background-color: white;
-    }
-  </style>
 <body id="body">
-    
     <header>
         <div class="icon__menu">
             <i class="fas fa-bars" id="btn_open"></i>
         </div>
+        <div class="logo">
+            <img src="logo.png" alt="EVA">
+        </div>
+        <div class="user-profile">
+            <i class="fas fa-user-circle"></i>
+        </div>
     </header>
 
     <div class="menu__side" id="menu_side">
-
         <div class="name__page">
             <i class="fab fa-youtube"></i>
-            <h4>EVA
-            
-            </h4>
+            <h4>EVA</h4>
         </div>
-
-        <div class="options__menu">	
-
+        <div class="options__menu">    
             <a href="#" class="selected">
                 <div class="option">
                     <i class="fas fa-home" title="Inicio"></i>
                     <h4>Inicio</h4>
                 </div>
             </a>
-
             <a href="#">
                 <div class="option">
                     <i class="far fa-file" title="Portafolio"></i>
                     <h4>Mapa</h4>
                 </div>
             </a>
-            
-           
-
             <a href="#">
                 <div class="option">
                     <i class="far fa-sticky-note" title="Blog"></i>
                     <h4>Energias</h4>
                 </div>
             </a>
-
             <a href="#">
                 <div class="option">
                     <i class="far fa-id-badge" title="Contacto"></i>
                     <h4>Historial</h4>
                 </div>
             </a>
-
             <a href="#">
                 <div class="option">
                     <i class="far fa-address-card" title="Nosotros"></i>
                     <h4>Nosotros</h4>
                 </div>
             </a>
-
         </div>
-
     </div>
 
     <main>
-        <h1>Mapa</h1><br>
-        <p>Selecciona que lugar del mundo quieres analizar</p> <br>
-
-        
+        <h1>Ingrese una o varias ubicaciones</h1>
+        <div id="map-container">
+            <div id="map">(Mapa)</div>
+        </div>
+        <div class="consumo-energia">
+            <label for="energia-consumida">Energía consumida</label>
+            <input type="text" id="energia-consumida" placeholder="Ingrese la cantidad de energía consumida por mes (estimada)">
+            <button class="confirm-button">Confirmar</button>
+        </div>
     </main>
-    <fieldset class="fieldset">
-        <legend class="titulo">Consumo electrico</legend>
-        <div class="campo">
-          <label for="lenguaje">¿Cual es tu consumo en W esperado?</label>
-          <input id="lenguaje" name="lenguaje" type="text" placeholder="Pon el consumo aqui">
-        </div>
-      </fieldset>
-      <button type="submit" class="submit-button">Submit</button>
 
-<script src="/JS/header.js"></script>
-<div id="map-container"> 
-    <input id="search-input" type="text" placeholder="Search">
-    <div id="map"></div>
-</div> 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMU-Pzd0WGlm2hSO0yJqTR_6pW-sbXvSo&libraries=places&callback=initMap"
-async defer></script>
-<script src="/JS/Google_map.js"></script>
+     
 
-
-    <footer>
-        <div class="footerContainer">
-            <div class="socialIcons">
-                <a href=""><i class="fa-brands fa-facebook"></i></a>
-                <a href=""><i class="fa-brands fa-instagram"></i></a>
-                <a href=""><i class="fa-brands fa-twitter"></i></a>
-                <a href=""><i class="fa-brands fa-google-plus"></i></a>
-                <a href=""><i class="fa-brands fa-youtube"></i></a>
-            </div>
-            <div class="footerNav">
-                <ul><li><a href="">Home</a></li>
-                    <li><a href="">News</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Contact Us</a></li>
-                    <li><a href="">our Team</a></li>
-                </ul>
-            </div>
-            
-        </div>
-        <div class="footerBottom">
-            <p>Copyright &copy;2023; Designed by <span class="designer">Noman</span></p>
-        </div>
-    </footer>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMU-Pzd0WGlm2hSO0yJqTR_6pW-sbXvSo&libraries=places&callback=initMap"
+    async defer></script>
+    <script src="/JS/Google_map.js  "></script>
 </body>
-
 </html>
-
-
