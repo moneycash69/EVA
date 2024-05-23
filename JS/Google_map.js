@@ -1,3 +1,14 @@
+// Google_map.js
+
+window.onload = function() {
+  var script = document.createElement('script');
+  script.src = `https://maps.googleapis.com/maps/api/js?key=${config.apiKey}&libraries=places&callback=initMap`;
+  script.async = true;
+  script.defer = true;
+  document.body.appendChild(script);
+}
+
+
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: -34.397, lng: 150.644},
@@ -55,25 +66,19 @@ function initMap() {
     // Para cada lugar, obtén el icono, nombre y ubicación
     var bounds = new google.maps.LatLngBounds();
     places.forEach(function(place) {
-      if (!place.geometry) {
-        console.log("Returned place contains no geometry");
-        return;
-      }
+        if (!place.geometry) {
+            console.log("Returned place contains no geometry");
+            return;
+        }
 
-      // Crea un nuevo marcador para cada lugar
-      new google.maps.Marker({
-        map: map,
-        title: place.name,
-        position: place.geometry.location
-      });
-
-      if (place.geometry.viewport) {
-        // Solo los geocodes tienen viewport
-        bounds.union(place.geometry.viewport);
-      } else {
-        bounds.extend(place.geometry.location);
-      }
+        // Extend the bounds of the map to include the selected place
+        if (place.geometry.viewport) {
+            // Only geocodes have viewport.
+            bounds.union(place.geometry.viewport);
+        } else {
+            bounds.extend(place.geometry.location);
+        }
     });
-    map.fitBounds(bounds);
-  });
+    map.fitBounds(bounds);  // This line moves the map to the selected place
+});
 }
