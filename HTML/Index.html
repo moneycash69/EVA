@@ -14,7 +14,7 @@
             <i class="fas fa-bars" id="btn_open"></i>
         </div>
         <div class="logo">
-            <img src="logo.png" alt="EVA">
+            <img src="/imagenes/EVA2.png" alt="EVA">
         </div>
         <div class="user-profile">
             <i class="fas fa-user-circle"></i>
@@ -23,8 +23,8 @@
 
     <div class="menu__side" id="menu_side">
         <div class="name__page">
-            <i class="fab fa-youtube"></i>
-            <h4>EVA</h4>
+            <img src="/imagenes/Planta.png" alt="">
+            <h4> </h4>
         </div>
         <div class="options__menu">    
             <a href="#" class="selected">
@@ -48,13 +48,13 @@
             <a href="#">
                 <div class="option">
                     <i class="far fa-id-badge" title="Contacto"></i>
-                    <h4>Historial</h4>
+                    <h4>Hist</h4>
                 </div>
             </a>
             <a href="#">
                 <div class="option">
                     <i class="far fa-address-card" title="Nosotros"></i>
-                    <h4>Nosotros</h4>
+                    <h4>Nos</h4>
                 </div>
             </a>
         </div>
@@ -62,21 +62,59 @@
 
     <main>
         <h1>Ingrese una o varias ubicaciones</h1>
-        <div id="map-container">
-            <div id="map">(Mapa)</div>
-        </div>
-        <div class="consumo-energia">
-            <label for="energia-consumida">Energía consumida</label>
-            <input type="text" id="energia-consumida" placeholder="Ingrese la cantidad de energía consumida por mes (estimada)">
-            <button class="confirm-button">Confirmar</button>
+        <div class="main-content">
+            <div id="map-container">
+                <div id="map">(Mapa)</div>
+            </div>
+            <div class="consumo-energia">
+                <label for="energia-consumida">Energía consumida</label>
+                <input type="text" id="energia-consumida" placeholder="Ingrese la cantidad de energía consumida por mes (estimada)">
+                <button class="confirm-button">Confirmar</button>
+            </div>
         </div>
     </main>
 
-     
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3>Sobre Nosotros</h3>
+                    <p>Somos una compañía dedicada a la gestión eficiente de la energía y la sostenibilidad.</p>
+                    <div class="socials">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section links">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Mapa</a></li>
+                        <li><a href="#">Energías</a></li>
+                        <li><a href="#">Historial</a></li>
+                        <li><a href="#">Nosotros</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact-form">
+                    <h3>Contáctanos</h3>
+                    <form action="#">
+                        <input type="email" placeholder="Tu correo electrónico">
+                        <textarea placeholder="Tu mensaje"></textarea>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2024 EVA | Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
 
     <script src="/JS/Config.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=" + config.apiKey + "&libraries=places&callback=initMap"
     async defer></script>
-    <script src="/JS/Google_map.js  "></script>
+    <script src="/JS/Google_map.js"></script>
 </body>
 </html>

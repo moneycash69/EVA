@@ -10,6 +10,8 @@
 
 body {
     display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     background-color: #f5f5f5;
 }
 
@@ -73,8 +75,9 @@ header {
     margin-bottom: 20px;
 }
 
-.name__page h4 {
-    margin-left: 10px;
+.name__page img {
+    height: 40px; /* Ajusta el tamaño de la imagen */
+    margin-right: 0px; /* Añade un margen derecho para separar el texto */
 }
 
 .options__menu {
@@ -101,22 +104,25 @@ header {
 }
 
 main {
+    flex: 1;
     margin-left: 100px;
     padding: 80px 20px 20px;
     width: calc(100% - 100px);
+    display: flex;
+    flex-direction: column;
 }
 
-h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
+.main-content {
+    display: flex;
+    gap: 20px;
+    flex: 1;
 }
 
 #map-container {
-    width: 100%;
+    flex: 1;
     height: 400px;
     background-color: #ccc;
     margin-bottom: 20px;
-    position: relative;
 }
 
 #map {
@@ -127,12 +133,12 @@ h1 {
 }
 
 .consumo-energia {
+    flex: 0 0 300px;
     padding: 20px;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 5px;
-    max-width: 300px;
-    margin-left: auto;
+    height: fit-content;
 }
 
 .consumo-energia label {
@@ -164,94 +170,100 @@ h1 {
     background-color: #0056b3;
 }
 
-.body_move {
-    margin-left: 250px;
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    flex-shrink: 0;
 }
 
-.menu__side_move {
-    width: 250px;
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-@media screen and (max-width: 768px) {
-    .menu__side {
-        width: 60px;
-    }
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
 
-    .menu__side .name__page h4 {
-        display: none;
-    }
+.footer-section {
+    flex: 1;
+    padding: 20px;
+    min-width: 200px;
+}
 
-    main {
-        margin-left: 80px;
-        width: calc(100% - 80px);
-    }
-    footer {
-        background-color: #111;
-        width: 100%;
-        color: white;
-        text-align: center;
-        padding: 20px 0;
-    }
-    
-    .footerContainer {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
-    
-    .footerNav ul {
-        display: flex;
-        justify-content: center;
-        list-style-type: none;
-        padding: 0;
-        margin: 20px 0;
-    }
-    
-    .footerNav ul li {
-        margin: 0 15px;
-    }
-    
-    .footerNav ul li a {
-        color: white;
-        text-decoration: none;
-        opacity: 0.7;
-        transition: opacity 0.3s;
-    }
-    
-    .footerNav ul li a:hover {
-        opacity: 1;
-    }
-    
-    .footerBottom p {
-        margin: 0;
-    }
-    
-    .footerBottom .designer {
-        opacity: 0.7;
-        font-weight: 400;
-    }
-    
-    .body_move {
-        margin-left: 250px;
-    }
-    
-    .menu__side_move {
-        width: 250px;
-    }
-    
-    @media screen and (max-width: 768px) {
-        .menu__side {
-            width: 60px;
-        }
-    
-        .menu__side .name__page h4 {
-            display: none;
-        }
-    
-        main {
-            margin-left: 80px;
-            width: calc(100% - 80px);
-        }
-    }
+.footer-section h3 {
+    margin-bottom: 20px;
+}
 
+.footer-section p,
+.footer-section ul,
+.footer-section form {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-section .socials a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section .socials a:hover {
+    color: #ddd;
+}
+
+.footer-section .contact-form input,
+.footer-section .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.footer-section .contact-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #0066cc;
+    color: #fff;
+    cursor: pointer;
+}
+
+.footer-section .contact-form button:hover {
+    background: #004d99;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+    width: 100%;
 }
